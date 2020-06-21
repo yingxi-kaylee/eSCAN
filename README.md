@@ -16,9 +16,13 @@ eSCAN links to R packages [Rcpp](https://cran.r-project.org/web/packages/Rcpp/in
 devtools::install_github("yingxi-kaylee/eSCAN")
 ```
 
+## Usage
+
+Please see the [eSCAN user manual](doc/eSCAN-manual.pdf) for detailed usage of eSCAN package. 
+
 ## Version
 
-The current version is 0.1.0 (June 20, 2020).
+The current version is 0.1.1 (June 21, 2020).
 
 ## License
 

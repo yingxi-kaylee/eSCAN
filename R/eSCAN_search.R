@@ -1,15 +1,4 @@
-#' @title eSCAN_SEARCH
-#' @description compute p-value for each enhancer
-#' @param genotype an n*p genotype matrix (dosage matrix)
-#' @param nullmod an object from fitNullModel() function
-#' @param new_enloc an m*3 matrix of enhancer information
-#' @param fam a logical value to indicate phenotype family: 1 indicates binomial, 0 indicates gaussian
-#' @param weights vector of weights for variants of interest
-#' @return a vector with len=n_en, listing p-value for each enhancer
-#' @import Rcpp
-#' @import RcppArmadillo
-#' @import Matrix
-eSCAN_SEARCH <- function(genotype, nullmod, new_enloc, fam=0, weights){
+eSCAN_search <- function(genotype, nullmod, new_enloc, fam=0, weights){
 
   G <- genotype
   ## variants number

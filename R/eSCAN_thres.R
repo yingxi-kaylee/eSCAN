@@ -1,15 +1,11 @@
-#' @title eSCAN_THRES
-#' @description compute empirical threshold
-#' @param genotype n*p genotype matrix
-#' @param nullmod fitted null model from GENESIS package
-#' @param new_enloc NULL or matrix whose number of rows is enhancer number, and has 6 columns, chr No., start_pos, end_pos, start_adj, end_adj, length
-#' @param fam logical value, 1 indicates binomial phenotype, 0 indicates gaussian
-#' @param times integer to indicate B in Monte Carlo simulation
-#' @param weights vector of weights for variants of interest
-#' @import Rcpp
-#' @import RcppArmadillo
-#' @import Matrix
-eSCAN_THRES <- function(genotype, nullmod, new_enloc, fam=0, times, weights){
+#' @references Zilin Li, Xihao Li, Yaowu Liu, Jincheng Shen, Han Chen, Hufeng Zhou, 
+#' Alanna C. Morrison, Eric Boerwinkle, and Xihong Lin (2019) "Dynamic Scan Procedure
+#' for Detecting Rare-Variant Association Regions in Whole-Genome Sequencing Studies". 
+#' The American Journal of Human Genetics, 104(5), 802-814.
+#' @references Gogarten, S.M., Sofer, T., Chen, H., Yu, C., Brody, J.A., Thornton, 
+#' T.A., Rice, K.M., and Conomos, M.P. (2019). Genetic association testing using 
+#' the GENESIS R/Bioconductor package. Bioinformatics.
+eSCAN_thres <- function(genotype, nullmod, new_enloc, fam=0, times, weights){
 
   seed <- 123
   G <- genotype

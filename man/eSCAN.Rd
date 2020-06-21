@@ -2,7 +2,7 @@
 % Please edit documentation in R/eSCAN.R
 \name{eSCAN}
 \alias{eSCAN}
-\title{eSCAN}
+\title{Scan the enhancers}
 \usage{
 eSCAN(
   genotype,
@@ -15,23 +15,50 @@ eSCAN(
 )
 }
 \arguments{
-\item{genotype}{n*p genotype matrix}
+\item{genotype}{an n*p genotype matrix, where n is the sample size and p is the number
+of rare varints included.}
 
-\item{nullmod}{fitted null model from GENESIS package}
+\item{nullmod}{a null model object returned from \code{\link{fitNull}}. Note that 
+\code{\link{fitNull}} is a wrapper of \code{\link[GENESIS]{fitNullModel}} function from the 
+\code{\link[GENESIS]{GENESIS}} package.}
 
-\item{new_enloc}{NULL or matrix whose number of rows is enhancer number, and has 6 columns, chr No., start_pos, end_pos, start_adj, end_adj, length}
+\item{new_enloc}{a data frame of annotation information with dimension q*6, where
+q is the number of the target regulatory regions. The six columns indicates no., physical
+start position, physical end position, start position in the \code{genotype} matrix, 
+end position in the \code{genotype} matrix and region length, respectively. 
+If annotation information is not specified by users (default=NULL), a data frame of 
+enhancer location will be automatically created by \code{\link{eGenerator}}.}
 
-\item{gap}{threshold to split independent loci, with default value 10^4}
+\item{gap}{if \code{new_enloc} is not specified by users, this parameter will be used 
+to generate enhancer locations in functoin \code{\link{eGenerator}}, where \code{gap}
+is the threshold to split independent loci (default=10^4)}
 
-\item{times}{simulation times for MC, with default value=1000}
+\item{times}{simulation times for MC (default=1000)}
 
-\item{alpha}{significance level}
+\item{alpha}{significance level (default=0.05)}
 
-\item{analy}{TRUE indicates analytical threshold, FALSE indicates empirical threshold}
+\item{analy}{TRUE indicates analytical threshold, FALSE indicates empirical threshold
+(default=FALSE)}
 }
 \value{
-a list containing 'res', 'res0', 'thres_mat', 'thres'
+The function returns a list containing the following elements:
+
+\code{res}: A matrix of significant regions detected by eSCAN.
+The first column is the p-value of the detected region.
+The next two columns are the location of the detected rgeion (physical position on
+ chromosome).
+
+\code{res0}: A matrix to summarise all the regions included in the analysis.
+The first column is the p-value of the detected region.
+The next two columns are the location of the detected rgeion (physical position on
+chromosome).
+
+\code{thres}: threshold of eSCAN to control the family-wise/genome-wide error
+at \code{alpha} level.
 }
 \description{
-scan the enhancer regions
+The \code{eSCAN} function is the main function in the package. It takes in 
+genotype matrix, null model object and annotation information which could be specified 
+by users, and then detect rare variant association between a quantitative/dichotomous 
+phenotype and a regulatory region in a sequence by using eSCAN procedure.
 }

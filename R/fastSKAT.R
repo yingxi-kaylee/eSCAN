@@ -1,5 +1,6 @@
-# this file is copied and then edited from GENESIS package
-
+#' @references Gogarten, S.M., Sofer, T., Chen, H., Yu, C., Brody, J.A., Thornton, 
+#' T.A., Rice, K.M., and Conomos, M.P. (2019). Genetic association testing using 
+#' the GENESIS R/Bioconductor package. Bioinformatics.
 testVariantSetSKAT <- function(nullmod, G, weights, neig = 200, ntrace = 500, verbose = FALSE){
 
   G <- genoAsMatrix(nullmod, G)

@@ -2,22 +2,30 @@
 % Please edit documentation in R/fitnull.R
 \name{fitNull}
 \alias{fitNull}
-\title{fitNull}
+\title{Fit generalized linear model under the null hypothesis for unrelated samples.}
 \usage{
 fitNull(x, outcome = NULL, covars = NULL, fam = "gaussian")
 }
 \arguments{
-\item{x}{a data frame containing outcome variable and covariates}
+\item{x}{a data frame containing outcome variable and covariates.}
 
-\item{outcome}{a character string specifying the name of outcome variable in x}
+\item{outcome}{a character string specifying the name of outcome variable in \code{x}.}
 
-\item{covars}{a vector of character strings specifying the name of covariates in x}
+\item{covars}{a vector of character strings specifying the name of covariates in \code{x}.}
 
-\item{fam}{a description of the error distribution and link function to be used in the model. Can only be either "gaussian" for continuous phenotype or "binomial" for binary phenotype}
+\item{fam}{Can be either "gaussian" for continuous phenotype or "binomial" for binary phenotype.}
 }
 \value{
-The function returns an object of model fit from \code{fitNullModel}. See \code{fitNullModel} in GENESIS package for more details.
+The function returns an object of model fit from \code{\link[GENESIS]{fitNullModel}}. See
+\code{\link[GENESIS]{fitNullModel}} in the \code{\link[GENESIS]{GENESIS}} package for more details.
 }
 \description{
-Fit generalized linear model under the null hypothesis. It's a wrapper of fitNullModel from GENESIS package.
+The \code{fitNull} function is a wrapper of \code{\link[GENESIS]{fitNullModel}} from the 
+\code{\link[GENESIS]{GENESIS}} package. It fits a regression model under the null hypothesis for 
+unrelated samples which is the preliminary step for subsequent analysis.
+}
+\references{
+Gogarten, S.M., Sofer, T., Chen, H., Yu, C., Brody, J.A., Thornton, 
+T.A., Rice, K.M., and Conomos, M.P. (2019). Genetic association testing using 
+the GENESIS R/Bioconductor package. Bioinformatics.
 }

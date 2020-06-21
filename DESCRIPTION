@@ -1,14 +1,14 @@
 Package: eSCAN
 Type: Package
-Title: Scan the Enhancers
-Version: 1.0
-Date: 2020-06-20
+Title: Scan the Enhancers: Scan Regulatory Regions for Rare Variant Aggregate Association Testing
+    using Whole Genome Sequencing Data
+Version: 0.1.1
+Date: 2020-06-21
 Author: Yingxi Yang
 Maintainer: Yingxi Yang <yangyx117@gmail.com>
-Description: Scan Regulatory Regions for Aggregate Association Testing
-    using Whole Genome Sequencing Data
+Description: eSCAN (or “Scan the Enhancers”, with “enhancers” as a shorthand for any potential regulatory regions in the genome) is an R package for performing genome-wide assessment of rare variant enhancer regions in sequencing studies, combining the advantages of dynamic window selection with the advantages of increasing genomic annotation information, including chromatin accessibility, histone markers, and 3D chromatin conformation.
 License: GPL-3
 Encoding: UTF-8
-Imports: Rcpp (>= 1.0.4.6), Matrix, GENESIS
+Imports: Rcpp (>= 1.0.4.6), RcppArmadillo, Matrix, GENESIS
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.1.0

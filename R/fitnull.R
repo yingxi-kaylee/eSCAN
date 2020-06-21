@@ -1,10 +1,16 @@
-#' @title fitNull
-#' @description Fit generalized linear model under the null hypothesis. It's a wrapper of fitNullModel from GENESIS package.
-#' @param x a data frame containing outcome variable and covariates
-#' @param outcome a character string specifying the name of outcome variable in x
-#' @param covars a vector of character strings specifying the name of covariates in x
-#' @param fam a description of the error distribution and link function to be used in the model. Can only be either "gaussian" for continuous phenotype or "binomial" for binary phenotype
-#' @return The function returns an object of model fit from \code{fitNullModel}. See \code{fitNullModel} in GENESIS package for more details.
+#' @title Fit generalized linear model under the null hypothesis for unrelated samples.
+#' @description The \code{fitNull} function is a wrapper of \code{\link[GENESIS]{fitNullModel}} from the 
+#' \code{\link[GENESIS]{GENESIS}} package. It fits a regression model under the null hypothesis for 
+#' unrelated samples which is the preliminary step for subsequent analysis.
+#' @param x a data frame containing outcome variable and covariates.
+#' @param outcome a character string specifying the name of outcome variable in \code{x}.
+#' @param covars a vector of character strings specifying the name of covariates in \code{x}.
+#' @param fam Can be either "gaussian" for continuous phenotype or "binomial" for binary phenotype.
+#' @return The function returns an object of model fit from \code{\link[GENESIS]{fitNullModel}}. See
+#' \code{\link[GENESIS]{fitNullModel}} in the \code{\link[GENESIS]{GENESIS}} package for more details.
+#' @references Gogarten, S.M., Sofer, T., Chen, H., Yu, C., Brody, J.A., Thornton, 
+#' T.A., Rice, K.M., and Conomos, M.P. (2019). Genetic association testing using 
+#' the GENESIS R/Bioconductor package. Bioinformatics.
 #' @export
 #' @importFrom GENESIS fitNullModel
 fitNull <- function(x, outcome=NULL, covars=NULL, fam = "gaussian"){

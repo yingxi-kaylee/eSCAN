@@ -1,9 +1,21 @@
-#' @title preprocess
-#' @description pre-process data for eSCAN
-#' @param geno n*p genotype matrix
-#' @param enhancer NULL or matrix whose number of rows is enhancer number, and has 6 columns, chr No., start_pos, end_pos, start_adj, end_adj, length
-#' @param gap threshold to split independent loci, with default value 10^4
-#' @return a list containing 'genotype', 'MAF' and 'new_enloc'
+#' @title Data preprocessing
+#' @description This function is a preliminary step for subsequent analysis using eSCAN.
+#' @param geno an n*p genotype matrix, where n is the sample size and p is the number
+#' of rare varints included.
+#' @param enhancer a data frame of annotation information with dimension q*6, where
+#' q is the number of the target regulatory regions. The six columns indicates no., physical
+#' start position, physical end position, start position in the \code{geno} matrix, 
+#' end position in the \code{geno} matrix and region length, respectively. 
+#' If annotation information is not specified by users (default=NULL), a data frame of 
+#' enhancer location will be automatically created by \code{\link{eGenerator}} function.
+#' @param gap threshold to split independent loci (default=10^4)
+#' @return The functoin returns a list with the following elements:
+#' \code{genotype}: An n*p genotype matrix by increasing order of variant position.
+#' \code{MAF}: A vector (length=p) of the minor allele frequency.
+#' \code{new_enloc}: A data frame of enhancer location of dimension q*6, where
+#' q is the number of the target regulatory regions. The six columns indicates No., physical
+#' start position, physical end position, start position in the \code{genotype} matrix, 
+#' end position in the \code{genotype} matrix and region length, respectively.
 #' @export
 preprocess <- function(geno, enhancer, gap){
   # re-arrange the genotype matrix by the SNP position

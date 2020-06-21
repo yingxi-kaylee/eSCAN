@@ -1,10 +1,17 @@
-#' @title generate enhancer
-#' @description generate enhancer list for further use
-#' @param geno genotype matrix
-#' @param maxgap threshold to split independent loci, with default value 10^4
-#' @return a data frame involving ennhancer information
+#' @title Generate enhancer locations
+#' @description The \code{eGenerator} function generates regulatory rgeion locations 
+#' if not specified by users.
+#' @param geno an n*p genotype matrix, where n is the sample size and p is the number
+#' of rare varints included.
+#' @param maxgap threshold to split independent loci (default=10^4)
+#' @return The function returns a data frame containing generated enhancer location.
+#' The first column is serial number of the enhancer.
+#' The next two columns are physical location of the enhancer.
+#' The nest two columns are adjusted location of the enhancer 
+#' (the position in the \code{geno} matrix).
+#' The last column is enhancer length.
 #' @export
-generate_enhancer <- function(geno, maxgap=10^4){
+eGenerator <- function(geno, maxgap=10^4){
   numSNP <- dim(geno)[2]
   posiSNP <- as.numeric(colnames(geno))
 
