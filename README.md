@@ -32,3 +32,7 @@ The current version is 0.1.1 (June 21, 2020).
 ## License
 
 This software is licensed under GPLv3.
+
+## Citation
+
+eSCAN
