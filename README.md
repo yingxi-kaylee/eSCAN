@@ -13,12 +13,17 @@ eSCAN links to R packages [Rcpp](https://cran.r-project.org/web/packages/Rcpp/in
 ## Installation
 
 ```
+install.packages("devtools")
 devtools::install_github("yingxi-kaylee/eSCAN")
 ```
 
 ## Usage
 
-Please see the [eSCAN user manual](doc/eSCAN-manual.pdf) for detailed usage of eSCAN package. 
+Please see the [eSCAN user manual](doc/eSCAN-manual.pdf) for detailed usage of eSCAN package. See the following section for a working example.
+
+## eSCAN Working Example
+
+Under construction. Coming soon!
 
 ## Version
 
