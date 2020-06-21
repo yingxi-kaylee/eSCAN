@@ -9,6 +9,6 @@ Description: Scan Regulatory Regions for Aggregate Association Testing
     using Whole Genome Sequencing Data
 License: GPL-3
 Encoding: UTF-8
-Imports: Rcpp (>= 1.0.4.6)
+Imports: Rcpp (>= 1.0.4.6), Matrix, GENESIS
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.1.0
