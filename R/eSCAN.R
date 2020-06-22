@@ -94,7 +94,7 @@ eSCAN <- function(genotype, nullmod, new_enloc=NULL, gap=10^4, times = 1000, alp
   } else{
     # for test purposes only
     # calculate p-values
-    pvalue <- eSCAN_SEARCH(genotype, nullmod, new_enloc, fam, weights)
+    pvalue <- eSCAN_search(genotype, nullmod, new_enloc, fam, weights)
     
     res0 <- cbind(pvalue, new_enloc[, 2:3])
     res_en <- NULL
