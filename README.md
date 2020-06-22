@@ -4,11 +4,8 @@ eSCAN: Scan Regulatory Regions for Aggregate Association Testing using Whole Gen
 
 ## Description
 
-eSCAN (or “Scan the Enhancers”, with “enhancers” as a shorthand for any potential regulatory regions in the genome) is an R package for performing genome-wide assessment of rare variant enhancer regions in sequencing studies, combining the advantages of dynamic window selection with the advantages of increasing genomic annotation information, including chromatin accessibility, histone markers, and 3D chromatin conformation.
+eSCAN (or “Scan the Enhancers”, with “enhancers” as a shorthand for any potential regulatory regions in the genome) is an R package for performing genome-wide assessment of rare variant enhancer regions that are significantly associated with a phenotype, combining the advantages of dynamic window selection with the advantages of increasing genomic annotation information, including chromatin accessibility, histone markers, and 3D chromatin conformation. eSCAN defines test windows across the genome by genomic annotation either specified by users or provided by eSCAN package such that each window marks putative regulatory region(s). eSCAN then searches the defined windows using fastSKAT and detect significant regions by an empirical/analytical threshold which adjusts for multiple testing of all the searching windows across the genome, of different sizes, including some overlapping windows.
 
-## Dependencies
-
-eSCAN links to R packages [Rcpp](https://cran.r-project.org/web/packages/Rcpp/index.html) and [RcppArmadillo](https://cran.r-project.org/web/packages/RcppArmadillo/index.html), and also imports R packages [Rcpp](https://cran.r-project.org/web/packages/Rcpp/index.html), [Matrix](https://cran.r-project.org/web/packages/Matrix/index.html), [GENESIS](https://bioconductor.org/packages/release/bioc/html/GENESIS.html). These dependencies should be installed before installing eSCAN.
 
 ## Installation
 
