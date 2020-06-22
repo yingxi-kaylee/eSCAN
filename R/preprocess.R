@@ -32,7 +32,7 @@ preprocess <- function(geno, enhancer, gap){
 
   #generate enhancer list
   if(is.null(enhancer)){
-    enhancer <- as.matrix(generate_enhancer(geno, gap))
+    enhancer <- as.matrix(eGenerator(geno, gap))
   }
 
   return(list(genotype=geno, MAF=MAF, new_enloc=enhancer))
