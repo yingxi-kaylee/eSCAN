@@ -2,34 +2,34 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 mfwht <- function(data, nrow, ncol) {
-    .Call(`_eSCAN_mfwht`, data, nrow, ncol)
+    .Call('_eSCAN_mfwht', PACKAGE = 'eSCAN', data, nrow, ncol)
 }
 
 big_mfwht <- function(data) {
-    .Call(`_eSCAN_big_mfwht`, data)
+    .Call('_eSCAN_big_mfwht', PACKAGE = 'eSCAN', data)
 }
 
 compPval <- function(Q, Covw_sub) {
-    .Call(`_eSCAN_compPval`, Q, Covw_sub)
+    .Call('_eSCAN_compPval', PACKAGE = 'eSCAN', Q, Covw_sub)
 }
 
 compCov <- function(G, X, working, sigma, fam) {
-    .Call(`_eSCAN_compCov`, G, X, working, sigma, fam)
+    .Call('_eSCAN_compCov', PACKAGE = 'eSCAN', G, X, working, sigma, fam)
 }
 
 compx <- function(G, X, working, sigma, fam, times) {
-    .Call(`_eSCAN_compx`, G, X, working, sigma, fam, times)
+    .Call('_eSCAN_compx', PACKAGE = 'eSCAN', G, X, working, sigma, fam, times)
 }
 
 compCovw <- function(p, w_num, Cov, weights) {
-    .Call(`_eSCAN_compCovw`, p, w_num, Cov, weights)
+    .Call('_eSCAN_compCovw', PACKAGE = 'eSCAN', p, w_num, Cov, weights)
 }
 
 matrix_flip <- function(G) {
-    .Call(`_eSCAN_matrix_flip`, G)
+    .Call('_eSCAN_matrix_flip', PACKAGE = 'eSCAN', G)
 }
 
 CCT_pval <- function(x, weights) {
-    .Call(`_eSCAN_CCT_pval`, x, weights)
+    .Call('_eSCAN_CCT_pval', PACKAGE = 'eSCAN', x, weights)
 }
 

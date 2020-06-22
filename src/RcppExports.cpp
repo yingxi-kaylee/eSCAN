@@ -110,20 +110,3 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-
-static const R_CallMethodDef CallEntries[] = {
-    {"_eSCAN_mfwht", (DL_FUNC) &_eSCAN_mfwht, 3},
-    {"_eSCAN_big_mfwht", (DL_FUNC) &_eSCAN_big_mfwht, 1},
-    {"_eSCAN_compPval", (DL_FUNC) &_eSCAN_compPval, 2},
-    {"_eSCAN_compCov", (DL_FUNC) &_eSCAN_compCov, 5},
-    {"_eSCAN_compx", (DL_FUNC) &_eSCAN_compx, 6},
-    {"_eSCAN_compCovw", (DL_FUNC) &_eSCAN_compCovw, 4},
-    {"_eSCAN_matrix_flip", (DL_FUNC) &_eSCAN_matrix_flip, 1},
-    {"_eSCAN_CCT_pval", (DL_FUNC) &_eSCAN_CCT_pval, 2},
-    {NULL, NULL, 0}
-};
-
-RcppExport void R_init_eSCAN(DllInfo *dll) {
-    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
-    R_useDynamicSymbols(dll, FALSE);
-}
