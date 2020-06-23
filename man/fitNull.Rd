@@ -2,7 +2,7 @@
 % Please edit documentation in R/fitnull.R
 \name{fitNull}
 \alias{fitNull}
-\title{Fit generalized linear model under the null hypothesis for unrelated samples.}
+\title{Fit a generalized linear model under the null hypothesis for unrelated samples}
 \usage{
 fitNull(x, outcome = NULL, covars = NULL, fam = "gaussian")
 }
@@ -11,18 +11,18 @@ fitNull(x, outcome = NULL, covars = NULL, fam = "gaussian")
 
 \item{outcome}{a character string specifying the name of outcome variable in \code{x}.}
 
-\item{covars}{a vector of character strings specifying the name of covariates in \code{x}.}
+\item{covars}{a vector of character strings specifying names of covariates in \code{x}.}
 
-\item{fam}{Can be either "gaussian" for continuous phenotype or "binomial" for binary phenotype.}
+\item{fam}{can be either "gaussian" for a continuous phenotype or "binomial" for a binary phenotype.}
 }
 \value{
-The function returns an object of model fit from \code{\link[GENESIS]{fitNullModel}}. See
+The function returns an object of model fitted from \code{\link[GENESIS]{fitNullModel}}. See
 \code{\link[GENESIS]{fitNullModel}} in the \code{\link[GENESIS]{GENESIS}} package for more details.
 }
 \description{
 The \code{fitNull} function is a wrapper of \code{\link[GENESIS]{fitNullModel}} from the 
 \code{\link[GENESIS]{GENESIS}} package. It fits a regression model under the null hypothesis for 
-unrelated samples which is the preliminary step for subsequent analysis.
+unrelated samples which is a preparation for subsequent analysis.
 }
 \references{
 Gogarten, S.M., Sofer, T., Chen, H., Yu, C., Brody, J.A., Thornton, 

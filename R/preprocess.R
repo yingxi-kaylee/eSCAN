@@ -1,21 +1,21 @@
 #' @title Data preprocessing
-#' @description This function is a preliminary step for subsequent analysis using eSCAN.
+#' @description This function is data preparation for subsequent analysis using eSCAN.
 #' @param geno an n*p genotype matrix, where n is the sample size and p is the number
-#' of rare varints included.
+#' of rare variants included.
 #' @param enhancer a data frame of annotation information with dimension q*6, where
-#' q is the number of the target regulatory regions. The six columns indicates no., physical
-#' start position, physical end position, start position in the \code{geno} matrix, 
-#' end position in the \code{geno} matrix and region length, respectively. 
+#' q is the number of candidate regulatory regions. The six columns indicate index, 
+#' start position, end position, start index, end index
+#' the \code{geno} matrix sorted by genomic positions and length of the enhancers, respectively. 
 #' If annotation information is not specified by users (default=NULL), a data frame of 
-#' enhancer location will be automatically created by \code{\link{eGenerator}} function.
-#' @param gap threshold to split independent loci (default=10^4)
-#' @return The functoin returns a list with the following elements:
-#' \code{genotype}: An n*p genotype matrix by increasing order of variant position.
-#' \code{MAF}: A vector (length=p) of the minor allele frequency.
-#' \code{new_enloc}: A data frame of enhancer location of dimension q*6, where
-#' q is the number of the target regulatory regions. The six columns indicates No., physical
-#' start position, physical end position, start position in the \code{genotype} matrix, 
-#' end position in the \code{genotype} matrix and region length, respectively.
+#' locations of the enhancers will be automatically created by \code{\link{eGenerator}}.
+#' @param gap threshold to split independent loci (default=10^4).
+#' @return The function returns a list with the following elements:
+#' @return \code{genotype}: an n*p genotype matrix sorted by genomic positions.
+#' @return \code{MAF}: a vector (length=p) of minor allele frequencies.
+#' @return \code{new_enloc}: a data frame of locations of the enhancers of dimension q*6, where
+#' q is the number of candidate regulatory regions. The six columns indicate index, 
+#' start position, end position, start index, end index 
+#' in the \code{genotype} matrix sorted by genomic postions and length of the enhancers, respectively.
 #' @export
 preprocess <- function(geno, enhancer, gap){
   # re-arrange the genotype matrix by the SNP position

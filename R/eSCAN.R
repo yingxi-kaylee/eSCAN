@@ -1,35 +1,33 @@
 #' @title Scan the enhancers
 #' @description The \code{eSCAN} function is the main function in the package. It takes in 
 #' genotype matrix, null model object and annotation information which could be specified 
-#' by users, and then detect rare variant association between a quantitative/dichotomous 
-#' phenotype and a regulatory region in a sequence by using eSCAN procedure.
+#' by users, and then detects rare variants association between a quantitative/dichotomous 
+#' phenotype and regulatory regions in whole-genome sequencing data by using eSCAN procedure.
 #' @param genotype an n*p genotype matrix, where n is the sample size and p is the number
-#' of rare varints included.
+#' of rare variants included.
 #' @param nullmod a null model object returned from \code{\link{fitNull}}. Note that 
 #' \code{\link{fitNull}} is a wrapper of \code{\link[GENESIS]{fitNullModel}} function from the 
 #' \code{\link[GENESIS]{GENESIS}} package.
 #' @param new_enloc a data frame of annotation information with dimension q*6, where
-#' q is the number of the target regulatory regions. The six columns indicates no., physical
-#' start position, physical end position, start position in the \code{genotype} matrix, 
-#' end position in the \code{genotype} matrix and region length, respectively. 
+#' q is the number of candidate regulatory regions. The six columns indicate index, 
+#' start position, end position, start index, end index 
+#' in the \code{genotype} matrix sorted by genomic positions and length of the enhancers, respectively. 
 #' If annotation information is not specified by users (default=NULL), a data frame of 
-#' enhancer location will be automatically created by \code{\link{eGenerator}}.
+#' locations of the enhancers will be automatically created by \code{\link{eGenerator}}.
 #' @param gap if \code{new_enloc} is not specified by users, this parameter will be used 
-#' to generate enhancer locations in functoin \code{\link{eGenerator}}, where \code{gap}
-#' is the threshold to split independent loci (default=10^4)
-#' @param times simulation times for MC (default=1000)
-#' @param alpha significance level (default=0.05)
-#' @param analy TRUE indicates analytical threshold, FALSE indicates empirical threshold
-#'  (default=FALSE)
+#' to generate locations of the enhancers in the function \code{\link{eGenerator}}, where \code{gap}
+#' is the threshold to split independent loci (default=10^4).
+#' @param times the number of MC simulations (default=1000).
+#' @param alpha significance level (default=0.05).
+#' @param analy TRUE indicates analytic threshold, FALSE indicates empirical threshold
+#'  (default=FALSE).
 #' @return The function returns a list containing the following elements:
-#' @return \code{res}: A matrix of significant regions detected by eSCAN.
-#' The first column is the p-value of the detected region.
-#' The next two columns are the location of the detected rgeion (physical position on
-#'  chromosome).
-#' @return \code{res0}: A matrix to summarise all the regions included in the analysis.
-#' The first column is the p-value of the detected region.
-#' The next two columns are the location of the detected rgeion (physical position on
-#' chromosome).
+#' @return \code{res}: a matrix of significant regions detected by eSCAN.
+#' The first column is the p-value of the detected region(s).
+#' The next two columns are start and end positions of the detected region(s).
+#' @return \code{res0}: a matrix to summarise all the regions included in the analysis.
+#' The first column is the p-value of the regulatory regions.
+#' The next two columns are start and end positions of the regulatory regions.
 #' @return \code{thres}: threshold of eSCAN to control the family-wise/genome-wide error
 #' at \code{alpha} level.
 #' @export

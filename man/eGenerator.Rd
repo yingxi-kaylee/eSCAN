@@ -2,25 +2,25 @@
 % Please edit documentation in R/eGenerator.R
 \name{eGenerator}
 \alias{eGenerator}
-\title{Generate enhancer locations}
+\title{Generate locations of the enhancers}
 \usage{
 eGenerator(geno, maxgap = 10^4)
 }
 \arguments{
 \item{geno}{an n*p genotype matrix, where n is the sample size and p is the number
-of rare varints included.}
+of rare variants included.}
 
-\item{maxgap}{threshold to split independent loci (default=10^4)}
+\item{maxgap}{threshold to split independent loci (default=10^4).}
 }
 \value{
-The function returns a data frame containing generated enhancer location.
-The first column is serial number of the enhancer.
-The next two columns are physical location of the enhancer.
-The nest two columns are adjusted location of the enhancer 
-(the position in the \code{geno} matrix).
-The last column is enhancer length.
+The function returns a data frame containing the generated locations of candidate enhancers.
+The first column is index of the enhancers.
+The next two columns are start and end positions of the enhancers. 
+The next two columns are start and end index of the enhancers 
+(the index in the \code{geno} matrix sorted by genomic positions).
+The last column is length of the enhancers.
 }
 \description{
-The \code{eGenerator} function generates regulatory rgeion locations 
+The \code{eGenerator} function generates locations of the regulatory regions 
 if not specified by users.
 }
