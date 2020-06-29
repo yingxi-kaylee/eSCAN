@@ -42,7 +42,6 @@ resemble the LD patterns from African Americans.
 
 ``` r
 library(eSCAN)
-#> Warning: multiple methods tables found for 'type'
 data(geno) # genotype data frame
 data(pheno) # phenotype and covariates data frame
 data(enhancer) # enhancer data frame, optional
@@ -95,7 +94,8 @@ parameter `times` indicates the number of Monte Carlo simulations
 able to get results within one minute.
 
 ``` r
-res_eSCAN <- eSCAN(genotype = geno, nullmod = nullmod, new_enloc = enhancer, times=10, alpha=0.05, analy=FALSE)
+res_eSCAN <- eSCAN(genotype = geno, nullmod = nullmod, new_enloc = enhancer, times=10, 
+                   alpha=0.05, analy=FALSE)
 ```
 
 The function returns a list containing 3 elements: `res`, `res0` and

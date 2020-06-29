@@ -9,3 +9,4 @@ src/*.dll
 README.Rmd
 doc
 Meta
+.Rbuildignore
