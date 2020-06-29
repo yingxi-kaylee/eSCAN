@@ -12,3 +12,5 @@ Encoding: UTF-8
 Imports: RcppArmadillo, Rcpp (>= 1.0.4.6), Matrix, GENESIS, methods, survey, CompQuadForm
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.1.0
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr

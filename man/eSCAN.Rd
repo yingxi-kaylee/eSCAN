@@ -47,7 +47,7 @@ The function returns a list containing the following elements:
 The first column is the p-value of the detected region(s).
 The next two columns are start and end positions of the detected region(s).
 
-\code{res0}: a matrix to summarise all the regions included in the analysis.
+\code{res0}: a matrix to summarize all the regions included in the analysis.
 The first column is the p-value of the regulatory regions.
 The next two columns are start and end positions of the regulatory regions.
 

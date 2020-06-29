@@ -25,7 +25,7 @@
 #' @return \code{res}: a matrix of significant regions detected by eSCAN.
 #' The first column is the p-value of the detected region(s).
 #' The next two columns are start and end positions of the detected region(s).
-#' @return \code{res0}: a matrix to summarise all the regions included in the analysis.
+#' @return \code{res0}: a matrix to summarize all the regions included in the analysis.
 #' The first column is the p-value of the regulatory regions.
 #' The next two columns are start and end positions of the regulatory regions.
 #' @return \code{thres}: threshold of eSCAN to control the family-wise/genome-wide error
