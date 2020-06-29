@@ -11,7 +11,7 @@ fitNull(x, outcome = NULL, covars = NULL, fam = "gaussian")
 
 \item{outcome}{a character string specifying the name of outcome variable in \code{x}.}
 
-\item{covars}{a vector of character strings specifying names of covariates in \code{x}.}
+\item{covars}{a vector of character strings specifying the names of covariates in \code{x}.}
 
 \item{fam}{can be either "gaussian" for a continuous phenotype or "binomial" for a binary phenotype.}
 }

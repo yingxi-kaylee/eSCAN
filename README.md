@@ -20,7 +20,9 @@ Please see the [eSCAN user manual](doc/eSCAN-manual.pdf) for detailed usage of e
 
 ## eSCAN Working Example
 
-Under construction. Coming soon!
+```
+library(eSCAN)
+```
 
 ## Version
 

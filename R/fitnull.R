@@ -4,7 +4,7 @@
 #' unrelated samples which is a preparation for subsequent analysis.
 #' @param x a data frame containing outcome variable and covariates.
 #' @param outcome a character string specifying the name of outcome variable in \code{x}.
-#' @param covars a vector of character strings specifying names of covariates in \code{x}.
+#' @param covars a vector of character strings specifying the names of covariates in \code{x}.
 #' @param fam can be either "gaussian" for a continuous phenotype or "binomial" for a binary phenotype.
 #' @return The function returns an object of model fitted from \code{\link[GENESIS]{fitNullModel}}. See
 #' \code{\link[GENESIS]{fitNullModel}} in the \code{\link[GENESIS]{GENESIS}} package for more details.

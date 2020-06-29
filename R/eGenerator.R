@@ -31,7 +31,7 @@ eGenerator <- function(geno, maxgap=10^4){
     enhancer_list[i,5] <- which(posiSNP==end)[1]
   }
   enhancer_list[,6] <- enhancer_list[,5] - enhancer_list[,4] + 1
-  colnames(enhancer_list) <- c("No.", "Start_pos", "End_pos", "Start_adj", "End_adj", "Length")
+  colnames(enhancer_list) <- c("Index", "Start_pos", "End_pos", "Start_index", "End_index", "Length")
 
   short <- enhancer_list$Length > 40
   enhancer_list <- enhancer_list[short,]
