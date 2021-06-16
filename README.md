@@ -136,8 +136,8 @@ error rate at `alpha` level.
 
 ``` r
 res_eSCAN$thres
-#>         5% 
-#> 0.00327119
+#>          5% 
+#> 0.004935235
 ```
 
 ## Version
@@ -150,7 +150,11 @@ This software is licensed under GPLv3.
 
 ## Citation
 
-eSCAN
+Yingxi Yang, Yuchen Yang, Le Huang, Jai G. Broome, Adolfo Correa,
+Alexander Reiner, Laura M. Raffield, and Yun Li (2021). “Escan: Scan
+Regulatory Regions for Aggregate Association Testing Using Whole Genome
+Sequencing Data.” *bioRxiv*,
+[2020.11.30.405266](https://doi.org/10.1101/2020.11.30.405266).
 
 ## References
 
@@ -163,5 +167,4 @@ Sequencing Studies”. *The American Journal of Human Genetics*, 104(5),
 Gogarten SM, Sofer T, Chen H, Yu C, Brody JA, Thornton TA, Rice KM,
 Conomos MP (2019). “Genetic association testing using the GENESIS
 R/Bioconductor package.” *Bioinformatics*.
-<doi:10.1093/bioinformatics/btz567>
-(URL:<https://doi.org/10.1093/bioinformatics/btz567>).
+[doi:10.1093/bioinformatics/btz567](https://doi.org/10.1093/bioinformatics/btz567).
