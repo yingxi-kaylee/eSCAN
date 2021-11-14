@@ -151,7 +151,7 @@ This software is licensed under GPLv3.
 ## Citation
 
 Yingxi Yang, Yuchen Yang, Le Huang, Jai G. Broome, Adolfo Correa,
-Alexander Reiner, Laura M. Raffield, and Yun Li (2021). “Escan: Scan
+Alexander Reiner, Laura M. Raffield, and Yun Li (2021). “eSCAN: Scan
 Regulatory Regions for Aggregate Association Testing Using Whole Genome
 Sequencing Data.” *bioRxiv*,
 [2020.11.30.405266](https://doi.org/10.1101/2020.11.30.405266).
